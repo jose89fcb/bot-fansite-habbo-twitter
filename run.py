@@ -17,13 +17,13 @@ count = 1
 
 #-------------------
 
-response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/habsite.php')
+response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/h-h/h-h.php')
 habbo = response.text
 
 #-------------------
 
 while loop == True:
-         response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/habsite.php')
+         response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/h-h/h-h.php')
          habboloop = response.text
          print("Comprobando si mi fansite favorita tiene nuevas noticias de habbo: " ,count)
          count = count + 1
@@ -32,7 +32,7 @@ while loop == True:
          if habbo != habboloop:
                   print("Nuevas Noticias...")
                   try:
-                           url = "http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/noticias.php"
+                           url = "http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/h-h/noticias.php"
                            response = requests.get(url)
                            Video = response.json()["Video"]
                            
