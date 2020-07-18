@@ -25,7 +25,7 @@ habbo = response.text
 while loop == True:
          response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/habsite.php')
          habboloop = response.text
-         print("Comprobando si habsite tiene nuevas noticias de habbo: " ,count)
+         print("Comprobando si mi fansite favorita tiene nuevas noticias de habbo: " ,count)
          count = count + 1
          sleep(interval)
 
@@ -40,7 +40,7 @@ while loop == True:
                            api = tweepy.API(auth)
                            api.update_status(""+Video+"\n\n\n\n")
                            loop = False
-                           print("Habsite tienes nuevas noticias de habbo, twiteando... Por favor, vuelva a ejecutar el programa.")
+                           print("Mi fansite favorita tiene nuevas noticias de habbo, twiteando... Por favor, vuelva a ejecutar el programa.")
                   except:
                            print("ERROR: ¡El módulo Tweepy no funciona, la clave habbo ha cambiado pero no ha sido tuiteada! Por favor, vuelva a ejecutar el programa.") # Error line
                            loop = False
