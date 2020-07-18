@@ -18,18 +18,18 @@ count = 1
 #-------------------
 
 response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/habsite.php')
-aes = response.text
+habbo = response.text
 
 #-------------------
 
 while loop == True:
          response = requests.get('http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/habsite.php')
-         aesloop = response.text
+         habboloop = response.text
          print("Comprobando si habsite tiene nuevas noticias de habbo: " ,count)
          count = count + 1
          sleep(interval)
 
-         if aes != aesloop:
+         if habbo != habboloop:
                   print("Nuevas Noticias...")
                   try:
                            url = "http://gtfr5gtf5er4.herokuapp.com/cameracafeV2/noticias.php"
@@ -42,6 +42,6 @@ while loop == True:
                            loop = False
                            print("Habsite tienes nuevas noticias de habbo, twiteando... Por favor, vuelva a ejecutar el programa.")
                   except:
-                           print("ERROR: Tweepy module is not working, aes key has changed but not tweeted! Please re-run the program.") # Error line
+                           print("ERROR: ¡El módulo Tweepy no funciona, la clave habbo ha cambiado pero no ha sido tuiteada! Por favor, vuelva a ejecutar el programa.") # Error line
                            loop = False
 
